@@ -2,6 +2,8 @@
 
 An adaptive conversation simulator that generates realistic, multi-turn conversations between two individuals, each defined by customizable OCEAN personality profiles.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniravbeni%2Focean-duet&env=OPENAI_API_KEY&envDescription=OpenAI%20API%20key%20for%20conversation%20generation&envLink=https%3A%2F%2Fplatform.openai.com%2Fapi-keys&project-name=ocean-duet&repository-name=ocean-duet)
+
 ## Features
 
 - **Personality-Driven Dialogue**: Generate conversations influenced by Big Five (OCEAN) personality traits
@@ -17,7 +19,35 @@ An adaptive conversation simulator that generates realistic, multi-turn conversa
 - **Visualization**: Recharts for trajectory and radar charts
 - **State Management**: React Context with useReducer
 
-## Getting Started
+## Deploy to Vercel
+
+The easiest way to deploy OCEAN Duet is with Vercel:
+
+1. Click the "Deploy with Vercel" button above
+2. Connect your GitHub account
+3. Add your `OPENAI_API_KEY` environment variable when prompted
+4. Click "Deploy"
+
+Your app will be live in minutes!
+
+### Manual Vercel Deployment
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+3. Add your environment variable in the Vercel dashboard:
+   - Go to your project settings
+   - Navigate to "Environment Variables"
+   - Add `OPENAI_API_KEY` with your API key
+
+## Local Development
 
 1. Clone the repository:
 ```bash
@@ -31,8 +61,9 @@ npm install
 ```
 
 3. Create a `.env.local` file with your OpenAI API key:
-```
-OPENAI_API_KEY=your-api-key-here
+```bash
+cp .env.example .env.local
+# Edit .env.local and add your API key
 ```
 
 4. Run the development server:
@@ -41,6 +72,12 @@ npm run dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENAI_API_KEY` | Yes | Your OpenAI API key for GPT models |
 
 ## Usage
 
