@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OCEAN Duet
+
+An adaptive conversation simulator that generates realistic, multi-turn conversations between two individuals, each defined by customizable OCEAN personality profiles.
+
+## Features
+
+- **Personality-Driven Dialogue**: Generate conversations influenced by Big Five (OCEAN) personality traits
+- **Real-time Trait Analysis**: Visualize how personality signals emerge and evolve through trajectory charts
+- **Trait Highlighting**: See which parts of dialogue reflect specific personality traits
+- **Document Grounding (RAG)**: Upload documents to provide context for participants
+- **Adaptive Listening Mode**: (V2-ready) Dynamic communication style adjustments based on detected signals
+
+## Tech Stack
+
+- **Frontend**: Next.js 14+, React, TypeScript, Tailwind CSS, shadcn/ui
+- **AI**: OpenAI GPT models for generation and analysis
+- **Visualization**: Recharts for trajectory and radar charts
+- **State Management**: React Context with useReducer
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/niravbeni/ocean-duet.git
+cd ocean-duet
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file with your OpenAI API key:
+```
+OPENAI_API_KEY=your-api-key-here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Configure participants (name, role, persona, OCEAN profile)
+2. Set up the conversation scenario (topic, background, tone)
+3. Click "Start" to begin the simulation
+4. Watch the conversation unfold with real-time analytics
+5. Toggle trait overlay to see personality signals in the dialogue
+6. Click on turns to view detailed radar charts
+7. Export conversations as JSON or Markdown
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
